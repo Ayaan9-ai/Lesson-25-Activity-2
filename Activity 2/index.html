@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple inheritence for kids</title>
+    </head>
+
+    <body style="background-color: rgb(202, 253, 168);" >
+        <center>
+            <h2>Simple inheritence for kids</h2>
+
+            <p id="details" style="background-color: aquamarine; 
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;" ></p>
+
+            <script>
+                // Parent Object
+                var animal = {
+                    type: "Animal",
+                    legs: 4
+                };
+
+                // Childs objects inherits from animal
+                var dog = Object.create(animal);
+                dog.name = "Buddy";
+                dog.sound = "Bark";
+
+                // Display Details
+                var details = "The " + dog.type + " has " + dog.legs + " legs. " + 
+                "Its called " + dog.name + " and it says " + dog.sound + ".";
+                document.getElementById("details").innerHTML = details;
+            </script>
+        </center>
+    </body>
+</html>
